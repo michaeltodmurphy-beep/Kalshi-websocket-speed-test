@@ -1,0 +1,43 @@
+[package]
+name = "kalshi-ws-bench"
+version = "0.1.0"
+edition = "2021"
+description = "Benchmark and test the speed/latency of the Kalshi WebSocket API"
+readme = "README.md"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# WebSocket client with native-TLS support
+tokio-tungstenite = { version = "0.28", features = ["native-tls"] }
+native-tls = "0.2"
+
+# CLI argument parsing with derive macros
+clap = { version = "4", features = ["derive"] }
+
+# JSON serialization / deserialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# RSA signing (PKCS#1 v1.5 / SHA-256) for Kalshi auth headers
+rsa = { version = "0.9", features = ["pem"] }
+sha2 = { version = "0.10", features = ["oid"] }
+
+# Base64 encoding for the RSA signature
+base64 = "0.22"
+
+# Timestamps used when building auth headers
+chrono = "0.4"
+
+# Colourful terminal output
+colored = "2"
+
+# Stream combinators (SinkExt, StreamExt)
+futures-util = "0.3"
+
+# Ergonomic error handling
+anyhow = "1"
+
+# HTTP types for injecting custom WebSocket handshake headers
+http = "1"
