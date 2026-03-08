@@ -179,5 +179,5 @@ The headers `KALSHI-ACCESS-KEY`, `KALSHI-ACCESS-SIGNATURE`, and `KALSHI-ACCESS-T
 ## API Reference
 
 - [Kalshi WebSocket API documentation](https://trading-api.readme.io/reference/websocket)
-- Production endpoint: `wss://api.elections.kalshi.com/trade-api/ws/v2`
+- Production endpoint: `wss://trading-api.kalshi.com/trade-api/ws/v2`
 - Demo/Sandbox endpoint: `wss://demo-api.kalshi.co/trade-api/ws/v2`

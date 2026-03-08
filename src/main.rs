@@ -27,7 +27,7 @@ use tokio_tungstenite::{
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
-const PROD_ENDPOINT: &str = "wss://api.elections.kalshi.com/trade-api/ws/v2";
+const PROD_ENDPOINT: &str = "wss://trading-api.kalshi.com/trade-api/ws/v2";
 const DEMO_ENDPOINT: &str = "wss://demo-api.kalshi.co/trade-api/ws/v2";
 
 /// Placeholder ticker used when none is specified on the CLI
@@ -54,7 +54,7 @@ type WsStream = WebSocketStream<MaybeTlsStream<tokio::net::TcpStream>>;
 /// Which API endpoint to target
 #[derive(Debug, Clone, ValueEnum)]
 enum EndpointChoice {
-    /// Production: wss://api.elections.kalshi.com/trade-api/ws/v2
+    /// Production: wss://trading-api.kalshi.com/trade-api/ws/v2
     Prod,
     /// Demo/Sandbox: wss://demo-api.kalshi.co/trade-api/ws/v2
     Demo,
